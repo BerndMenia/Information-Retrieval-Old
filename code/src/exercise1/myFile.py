@@ -7,8 +7,6 @@ import string
 import spacy
 
 
-
-
 # Stop words
 STOP_WORDS = set(
     """
@@ -77,12 +75,6 @@ yet you your yours yourself yourselves
 'd 'll 'm 're 's 've
 """.split()
 )
-
-
-
-
-
-
 
 
 # https://www.pythonforbeginners.com/files/reading-and-writing-files-in-python
