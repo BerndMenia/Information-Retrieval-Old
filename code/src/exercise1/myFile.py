@@ -22,7 +22,7 @@ def total_number_of_terms(s):
     return len(s.split())
 
 
-def unique_words(text=""):
+def unique_terms(text=""):
     lst = []
     for s in text:
         if not s in lst:
@@ -30,7 +30,13 @@ def unique_words(text=""):
     return lst
 
 
-# def calculate_frequency(s):
+# https://stackoverflow.com/questions/40985203/counting-letter-frequency-in-a-string-python
+def calculate_frequency(s):
+    counts = Counter(s)  # Counter({'l': 2, 'H': 1, 'e': 1, 'o': 1})
+    counts.most_common()
+    # for i in s:
+    #     print(i, counts[i])
+    return counts
 
 
 text = read_in("books/the_raven.txt")
@@ -42,4 +48,8 @@ text = remove_punctuation(text)
 print("Total number of terms:", total_number_of_terms(text))
 
 text_split = text.split()
-print("Total number of unique terms:", len(unique_words(text_split)))
+print("Total number of unique terms:", len(unique_terms(text_split)))
+
+frequency = calculate_frequency(text_split)
+print(frequency)
+print(type(frequency))
