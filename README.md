@@ -1,11 +1,16 @@
 # Information Retrieval
 Overview about things that get done here, meep. 
 
+## Important Topics
+1. Stunde:  Retrieval Modell, IR Process, Inverted Index (3 implementation possibilities), Tries, Patricia Tries (Kap.1-2)
+
+2. Stunde:  Tokenization, Stop-Words, Phrase dedection, Named Entity Recognition, Stemming, Lemmatization, Porter's Algo, Thesauri, WordNet (Kap.3).
+
 ## PS Exercises in Points
-1.1 - 0 / 7  
+1.1 - 7 / 7  
 1.2 - 0 / 3
 
-## Literature 
+## Literature
 * Ch. D. Manning, P. Raghavan, H. Schütze: Introduction to Information Retrieval; Online Edition, Cambridge UP 2009
 (wichtigstes Buch zur VO, online verfügbar)
 

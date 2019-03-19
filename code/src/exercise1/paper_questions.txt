@@ -1,0 +1,10 @@
+1) What is the goal of this paper?
+Exploring new techniques for efficient evaluation of phrase queries
+Generally phrase queries are performed by creating an inverted index of the available documents and then query those inverted indexes.
+
+
+2) How do the authors reach their goal?
+The authors have already proposed another solution to this problem by using nextword indices. Using them can speed up queries a lot, but the indexes are twice as large as conventional inverted one and therefore not suitable for all use cases. However making use of a combination of nextword indices and inverted indices phrase querying is twice as fast, but the overhead is only 10%.
+
+
+3) How do they evaluate their approach?
