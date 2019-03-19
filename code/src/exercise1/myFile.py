@@ -1,8 +1,6 @@
 from os.path import abspath
 from collections import Counter
 
-# I can't import stop_words.py somehow
-
 import string
 import spacy
 
@@ -77,15 +75,12 @@ yet you your yours yourself yourselves
 )
 
 
-# https://www.pythonforbeginners.com/files/reading-and-writing-files-in-python
-# https://stackoverflow.com/questions/9427037/relative-path-not-working-even-with-init-py
 def read_in(file_path):
     file_path = abspath("../../../" + file_path)
     file = open(file_path, "r")
     return file.read().lower()
 
 
-# https://stackoverflow.com/questions/265960/best-way-to-strip-punctuation-from-a-string-in-python
 def remove_punctuation(s):
     return s.translate(str.maketrans('', '', string.punctuation))
 
@@ -102,8 +97,6 @@ def unique_terms(text=""):
     return lst
 
 
-# https://stackoverflow.com/questions/40985203/counting-letter-frequency-in-a-string-python
-# https://stackoverflow.com/questions/20950650/how-to-sort-counter-by-value-python
 def calculate_frequency(s):
     counts = Counter(s)  # Counter({'l': 2, 'H': 1, 'e': 1, 'o': 1})
     counts.most_common()
