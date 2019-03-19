@@ -4,7 +4,6 @@ from collections import Counter
 import string
 import spacy
 
-
 # Stop words
 STOP_WORDS = set(
     """
@@ -81,15 +80,15 @@ def read_in(file_path):
     return file.read().lower()
 
 
-def remove_punctuation(s):
-    return s.translate(str.maketrans('', '', string.punctuation))
+def remove_punctuation(text):
+    return text.translate(str.maketrans('', '', string.punctuation))
 
 
-def total_number_of_terms(s):
-    return len(s.split())
+def total_number_of_terms(text):
+    return len(text.split())
 
 
-def unique_terms(text=""):
+def unique_terms(text):
     lst = []
     for s in text:
         if not s in lst:
@@ -97,11 +96,9 @@ def unique_terms(text=""):
     return lst
 
 
-def calculate_frequency(s):
-    counts = Counter(s)  # Counter({'l': 2, 'H': 1, 'e': 1, 'o': 1})
+def calculate_frequency(text):
+    counts = Counter(text)  # Counter({'l': 2, 'H': 1, 'e': 1, 'o': 1})
     counts.most_common()
-    # for i in s:
-    #     print(i, counts[i])
     return counts
 
 
@@ -110,7 +107,7 @@ def get_top_50(frequency):
 
     for i in range(len(lst)):
         term, amount = lst[i]
-        lst[i] = (i+1, term, amount)
+        lst[i] = (i + 1, term, amount)
 
     return lst
 
